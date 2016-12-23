@@ -109,7 +109,7 @@ extension UIView {
         }
         
         set (newCenterX) {
-            self.center = CGPointMake(newCenterX, self.center.y)
+            self.center = CGPoint(x: newCenterX, y: self.center.y)
         }
     }
     
@@ -119,7 +119,7 @@ extension UIView {
         }
         
         set (newCenterY) {
-            self.center = CGPointMake(self.center.x, newCenterY)
+            self.center = CGPoint(x: self.center.x, y: newCenterY)
         }
     }
     
@@ -161,13 +161,13 @@ extension UIView {
     
     public var contentBounds: CGRect {
         get {
-            return CGRectMake(0, 0, boundsWidth, boundsHeight)
+            return CGRect(x: 0, y: 0, width: boundsWidth, height: boundsHeight)
         }
     }
     
     public var contentCenter: CGPoint {
         get {
-            return CGPointMake(boundsWidth / 2.0, boundsHeight / 2.0)
+            return CGPoint(x: boundsWidth / 2.0, y: boundsHeight / 2.0)
         }
     }
     
